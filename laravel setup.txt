@@ -1,0 +1,15 @@
+PHP setup
+composer install
+Laravel global  package install kita
+
+---------
+
+pph artisan make:controller ControllerName
+
+php artisan make:modal ModalName
+
+
+php artisan migrate 
+
+
+php artisan serve

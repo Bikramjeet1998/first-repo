@@ -1,0 +1,7 @@
+http://localhost/online-shopping-system-master/admin/login.php
+
+ open any browser and type http://localhost/online-shopping-system-with-advanced-admin-page-master.
+
+12. first register and then login
+
+13. admin login details  Email=admin@gmail.com or username = admin and Password=123456789.

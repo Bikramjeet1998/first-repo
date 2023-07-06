@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>crud task</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+        </script>
+    <div class="div1">
+        <form action="#">
+            Enter name: <input type="text" id="name" value="">
+            Enter age : <input type="text" id="age" value=""> <br> <br>
+            Enter gender: <label><input type="radio" name="gender" value="male" id="gender"> Male</label>
+            <label><input type="radio" name="gender" value="female" id="gender"> Female</label> <br> <br>
+            Enter Hobbies: <input type="text" id="Hobbies">
+            <input type="button" id="btnadd" value="add" style="width: 5vw" onclick="add_item()"><br><br>
+            <div id="add"></div>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <div style="height: 500px;width: 400px;top: 50%; left: 50%; transform: translate(-30%,-30%);position: absolute;">
+
+        <table class='table' border 1>
+            <thead>
+                <tr>
+                    <th> NAME </th>
+                    <th> AGE </th>
+                    <th> GENDER </th>
+                    <th> HOBBIES </th>
+                    <th> Action</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+
+
+            </tbody>
+
+
+        </table>
+    </div>
+
+    <script>
+        function add_item() {
+            var fieldHTML = '<div id = "123"><input type="text" id="Hobbies" value=" "/> <input type ="button" id="remove" value="remove"/><br></div>'
+            $("#add").append(fieldHTML);
+
+            $("#remove").click(function () {
+                $("#123").remove();
+            })
+        }
+        $("form").submit(function () {
+            event.preventDefault();
+           formdata = {};
+
+          console.log(formdata["name"]=$("#name").val());
+           formdata["age"]=$("#age").val();
+           formdata["gender"]=$("#gender:checked ").val()
+           formdata["hobbies"]=$("#Hobbies").val();
+
+        //    let name = $("#name").val();
+        //     let age = $("#age").val();
+        //     let gender = $("input[type='radio']:checked ").val();
+        //     // var gender = $("#gender:checked ").val()
+        //     let hob = $("#Hobbies").val();
+        //     // let add = $("#Input").val();
+             resetForm();
+            adddata();
+            function adddata() {
+                // $(".tbody").html()
+                let table = document.getElementsByTagName("tbody")[0];
+                var newRow = table.insertRow(table.length);
+                cell1 = newRow.insertCell(0);
+                cell1.innerHTML = name;
+                cell2 = newRow.insertCell(1);
+                cell2.innerHTML = age;
+                cell3 = newRow.insertCell(2);
+                cell3.innerHTML = gender;
+                cell4 = newRow.insertCell(3);
+                cell4.innerHTML = Hobbies;
+                cell4 = newRow.insertCell(4);
+                cell4.innerHTML = '<button id="edit" onclick="onEdit(this)">Edit</button> <button id="111" onClick="onDelete()" >Delete</button>'
+
+                $("#111").click(function () {
+                    $(this).parent().parent().remove();
+                    // $('.tbody tr:last').remove();
+
+                    // table.deleteRow("tr");
+                })
+                // function onDelete() {
+                //     // row = td.parentElement.parentElement;
+                //     // document.getElementsByTagName("tbody").deleteRow(row.rowIndex);
+                // }
+
+
+
+
+                function onEdit() {
+
+
+                }
+            }
+            function resetForm() {
+                $("#name").val("");
+                $("#numb").val("");
+                $("input[type='radio']:checked").val("");
+                $("#Hobbies").val("");
+
+            }
+        })
+        // });
+    </script>
+</body>
+
+</html>

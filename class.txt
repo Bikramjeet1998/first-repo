@@ -1,0 +1,26 @@
+- Create Databse class
+   - functions create
+      - get users
+      - create user
+
+
+Update form action make it dynamic
+
+
+Form submit on the same page
+
+Include Database class in same file
+check if if form is submitted if yes then call create user function
+
+to get data from database we use get users function from database class
+
+
+
+- Make edit link dynamic
+- Update User form using Database class
+    - create a new function which get array	
+
+
+git add ,commit ,push
+    
+

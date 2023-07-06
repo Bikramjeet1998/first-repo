@@ -1,0 +1,18 @@
+1st
+Create new columns in users table
+Save passowrd using laravel Hash
+Login using Auth::attempt function
+Redirect to dashbord
+
+2nd 
+
+Creat new roles table 
+  -> id : 1,2,3
+ -> name : admin, user, other role name
+
+Create new column in users table role_id = roles.id
+
+
+Relation 
+ User has role
+ Role bleongs to User
